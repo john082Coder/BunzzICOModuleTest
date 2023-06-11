@@ -1,1 +1,1 @@
-airdrop, maxRecipientCount, retrieveTokens
+connectToOtherContracts, buy, updatePrice
