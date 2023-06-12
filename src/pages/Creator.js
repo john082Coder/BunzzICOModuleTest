@@ -185,6 +185,39 @@ const Creator = () => {
                                     />{` `} WithdrawETH
                             </Button>
                         }
+                        {!pendingWithdrawTokens ?
+                                <Button className="mx-3 mt-2" variant="dark" onClick={async () => {
+                                    setPendingWithdrawTokens(true);
+                                try {
+                                    let txHash;
+                                    
+                                    txHash = await withdrawToken(
+                                        icoContract,
+                                        account,
+                                    );
+                                
+                                    console.log(txHash);
+                                    setPendingWithdrawTokens(false);
+                                    
+                                } catch (e) {
+                                    console.log(e);
+                                    setPendingWithdrawTokens(false);
+                                    
+                                }
+                            }}>
+                                WithdrawToken
+                            </Button>
+                            :
+                            <Button className="mx-3 mt-2" variant="dark">
+                                 <Spinner
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                    />{` `} WithdrawToken
+                            </Button>
+                        }
 
                     </Form>
                     

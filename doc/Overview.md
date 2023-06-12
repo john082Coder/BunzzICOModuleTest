@@ -17,7 +17,7 @@ It is a common method in blockchain space, decentralized applications and in-gam
 - github repo URL
     https://github.com/john082Coder/BunzzICOModuleTest
 - simple dapp URL
-    https://bunzz-airdrop-erc-20-module-test.vercel.app/
+    https://bunzz-ico-module-test.vercel.app/
 
 ---
 ## Review report
