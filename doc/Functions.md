@@ -12,41 +12,46 @@ This function will be called by the owner if he wants to drop the ownership of t
 
 No arguments
 
-## retrieveTokens
-Transfer back the amount of tokens that have not been airdropped or the owner simply wants backr
+## buy
+Pay ETH and buy the target token.
+
+No arguments
+
+## updatePrice
+Update the token price for ICO
 
 |Name|Type|Description|Example|Default|
 |--- |---|---|---|---|
-|amount|uint256|The amount the owner wish to retireve back from the airdrop contract.||N/A|
-
-## airdrop
-Airdrop tokens to the recipients, can only be called by the owner
-
-|Name|Type|Description|Example|Default|
-|--- |---|---|---|---|
-|recipients|address[]|The array should represent the addresses that will get tokens in this airdrop||N/A|
-|amounts|uint256[]|The array should represents that amounts that will be airdropped to each recipient individually.||N/A|
+|_price|uint256|The new token price||N/A|
 
 ## connectToOtherContracts
 Call this function to connect a token to your contract, it should be the first thing to do to setup the contract
 
 |Name|Type|Description|Example|Default|
 |--- |---|---|---|---|
-|_contracts|address[]|The array should only contain one item, and that item should be the address of the token you wish to airdrop||N/A|
+|addresses|address[]|The array should only contain one item, and that item should be the address of the token you wish to airdrop||N/A|
 
 
-## setMaxRecipientCount
-Set the max value of recipient count
+## withdrawETH
+Withdraw ETH from the ICO contract
 
-|Name|Type|Description|Example|Default|
-|--- |---|---|---|---|
-|_maxRecipientCount|uint256|The new value of max recipient count||N/A|
+No arguments
+
+## withdrawToken
+Withdraw the target tokens from contract
+
+No arguments
 
 
 # READ(main)
 
-## owner
-Owner of the contract
+## endTime
+Returns ICO end time
+
+No arguments
+
+## startTime
+Returns ICO start time
 
 No arguments
 
@@ -55,7 +60,12 @@ Returns the address of the token that is connected with this contract
 
 No arguments
 
-## maxRecipientCount
-Returns the max value of recipient count
+## owner
+Returns contract owner address
+
+No arguments
+
+## price
+Returns token price
 
 No arguments
